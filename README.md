@@ -3,7 +3,8 @@ libnosdlfullscreen
 
 A quick LD\_PRELOAD hack that forces SDL 1.x apps to not run in fullscreen.
 
-Copyright (C) 2015 Scott Zeid.  Released under the X11 License.
+Copyright (C) 2015 Scott Zeid.  Released under the X11 License.  
+<http://code.s.zeid.me/libnosdlfullscreen>
 
 
 Usage
