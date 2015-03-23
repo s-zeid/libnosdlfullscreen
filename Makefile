@@ -6,7 +6,7 @@ all: libnosdlfullscreen.so
 libnosdlfullscreen.so: libnosdlfullscreen-native.so
 	mv $^ $@
 
-libnosdlfullscreen%.so: clean nosdlfullscreen.c
+libnosdlfullscreen%.so: nosdlfullscreen.c
 	$(CC) $(CFLAGS) -Wall -fPIC -DPIC -c nosdlfullscreen.c \
 	 $(if $(filter 32,$*),-m$*,)
 	$(LD) $(LDFLAGS) -ldl -shared -o $@ nosdlfullscreen.o \
