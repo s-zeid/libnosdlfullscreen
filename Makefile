@@ -7,9 +7,9 @@ libnosdlfullscreen.so: libnosdlfullscreen-native.so
 	mv $^ $@
 
 libnosdlfullscreen%.so: clean nosdlfullscreen.c
-	$(CC) -Wall -fPIC -DPIC -c nosdlfullscreen.c \
+	$(CC) $(CFLAGS) -Wall -fPIC -DPIC -c nosdlfullscreen.c \
 	 $(if $(filter 32,$*),-m$*,)
-	$(LD) -ldl -shared -o $@ nosdlfullscreen.o \
+	$(LD) $(LDFLAGS) -ldl -shared -o $@ nosdlfullscreen.o \
 	 $(if $(filter 32,$*),-m elf_i386,)
 	rm -f nosdlfullscreen.o
 
